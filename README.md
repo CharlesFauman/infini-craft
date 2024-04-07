@@ -1,3 +1,5 @@
+![example](image.png)
+
 ## To run:
 ### Install llama model
 `cd models && git clone https://huggingface.co/TheBloke/Llama-2-7B-Chat-GPTQ --branch gptq-4bit-32g-actorder_True --single-branch`
