@@ -1,0 +1,1 @@
+Install loras here: `git clone https://huggingface.co/CharlesFauman/infini_craft --branch gptq-4bit-32g-actorder_True --single-branch`

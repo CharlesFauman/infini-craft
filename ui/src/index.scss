@@ -1,0 +1,30 @@
+$defaultPagePadding: 2.05rem;
+
+$maxViewWidth: 120rem;
+$minViewWidth: 100rem;
+
+
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+$mobile-query: "(max-width: 63.999999rem), (pointer: none), (pointer: coarse)";
+$desktop-query: "(min-width: 64rem), not all and (pointer: none), not all and (pointer: coarse)";
+
+
+
+// Define mixin for mobile
+@mixin mobile {
+  @media #{$mobile-query} {
+    @content;
+  }
+}
+
+// Define mixin for desktop (not mobile)
+@mixin desktop {
+  @media #{$desktop-query} {
+    @content;
+  }
+}

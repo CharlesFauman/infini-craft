@@ -1,0 +1,1 @@
+Install model here: `git clone https://huggingface.co/TheBloke/Llama-2-7B-Chat-GPTQ --branch gptq-4bit-32g-actorder_True --single-branch`

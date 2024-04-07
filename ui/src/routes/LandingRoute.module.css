@@ -1,0 +1,239 @@
+.elementButton {
+  display: inline-flex; /* Changed from flex to inline-flex */
+  align-items: center;
+  margin: 0.3125rem; /* 5px / 16px = 0.3125rem */
+  padding: 0.3125rem 0.625rem; /* 5px / 16px = 0.3125rem, 10px / 16px = 0.625rem */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 0.3125rem; /* 5px / 16px = 0.3125rem */
+  cursor: pointer;
+  white-space: nowrap; /* Prevents the text from wrapping */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.elementButton:hover {
+  background-color: #f0f0f0;
+}
+
+.elementEmoji {
+  margin-right: 0.5rem; /* 8px / 16px = 0.5rem */
+}
+
+.elementText {
+  font-weight: bold;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds an ellipsis to overflowing text */
+}
+
+/* Flex container to allow wrapping of element buttons */
+.elementsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.elementButtonDiscovery {
+  background-color: yellow; /* Or any shade of yellow you prefer */
+}
+
+.canvasContainer {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  z-index: 100; /* Higher than the sidebar z-index */
+}
+
+.sidebar {
+  user-select: none;
+  width: 350px; /* Fixed width for the sidebar */
+  background-color: #fff;
+  border-left: 1px solid #ddd;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  height: 100vh; /* Use 100vh to ensure full height */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Allows scrolling inside the sidebar */
+}
+
+
+/* Links container styling */
+.linksContainer {
+  user-select: none;
+  display: flex;
+  flex-direction: row; /* Ensures horizontal alignment */
+  position: absolute; /* Positioning relative to the mainContent area */
+  bottom: 0; /* Aligns at the bottom */
+  right: 18.75rem; /* Right offset by the width of the sidebar */
+  padding: 0.5rem; /* Adds some padding around the links */
+}
+
+.linkButton {
+  margin-right: 1rem;
+  user-select: none;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: none;
+}
+
+.linkButton:hover, .linkButton:focus {
+  background-color: #e0e0e0;
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.linkButton:visited {
+  color: #007bff;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.linkButton:visited:hover, .linkButton:visited:focus {
+  background-color: #e0e0e0;
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Sidebar links styling */
+.sidebarLinks {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end; /* Align items to the bottom */
+  justify-content: flex-end; /* Ensures the sidebar is at the end (right side) */
+  height: 100vh; /* Adjust height as needed */
+  position: relative; /* For absolute positioning of links */
+  box-sizing: border-box;
+}
+
+.topRow {
+  margin-bottom: 10px;
+  padding: 0px 10px 0px 2px;
+  flex-shrink: 0;
+}
+
+.bottomRow {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-shrink: 0;
+}
+
+.searchInput {
+  width: 100%; /* Ensure the input takes full width */
+}
+.sortSelect {
+  margin-right: 10px; /* Adjust spacing between sort select and toggle button */
+}
+
+.sortToggle {
+  margin-right: 10px; /* Adjust spacing between sort toggle and export button */
+}
+
+.button {
+  background-color: #f3f3f3; /* Background color for buttons */
+  border: 1px solid #ccc; /* Border for buttons */
+  padding: 5px 10px; /* Padding inside buttons */
+  cursor: pointer;
+  user-select: none;
+  font-size: 12px; /* Ensuring font size is the same for both */
+  font-family: Arial, sans-serif; /* Ensuring font family is the same for both */
+  display: inline-block; /* Aligning items next to each other */
+  text-align: center; /* Centering text inside the button and label */
+  vertical-align: middle; /* Aligning items vertically */
+  line-height: normal; /* Adjust if needed to match the height */
+}
+
+.fileInput {
+  display: none;
+}
+
+/* Specific styles for file input label to make it look like a button */
+.fileInputLabel {
+  /* Apply inputButton styles */
+  display: inline-block; /* Needed to apply padding and margins */
+}
+
+.inputButton {
+  background-color: #f9f9f9; /* Match .elementButton background */
+  border: 1px solid #ddd; /* Match .elementButton border */
+  border-radius: 0.3125rem; /* Match .elementButton border-radius */
+  padding: 0.3125rem 0.625rem; /* Adjust padding as necessary */
+  margin: 0.3125rem; /* Match .elementButton margin */
+  font-weight: bold; /* Match .elementButton font-weight */
+  color: #333; /* Match .elementButton text color */
+  cursor: pointer; /* Match .elementButton cursor */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Match .elementButton box-shadow */
+}
+
+.inputButton:hover {
+  background-color: #f0f0f0; /* Match .elementButton hover state */
+}
+
+.searchInput {
+  width: 100%; /* Full-width to fill container */
+  box-sizing: border-box; /* To include padding and border in the element's width */
+  line-height: normal; /* Adjust line height to match .elementButton */
+  font-size: 1rem; /* Match .elementButton font-size */
+}
+
+.pinnedElementButton {
+  border: 2px solid orangered;
+}
+
+/* Position the help container at the top left of the sidebar */
+.helpContainer {
+  position: absolute;
+  top: 0;
+  right: 350px; /* Adjust this based on the actual width of your sidebar */
+  z-index: 101; /* Ensure it's above other content */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start of the flex container */
+  padding: 10px
+}
+
+.helpButton {
+  user-select: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9; /* Match the elementButton background color */
+  border: 1px solid #ddd; /* Match the elementButton border */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Match the elementButton box-shadow */
+}
+
+.helpOverlay {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 40px; /* Adjust so it's just below the help button */
+  background-color: rgba(255, 255, 255, 0.9);
+  right: 60px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  white-space: nowrap;
+}
+
+.helpContainer:hover .helpOverlay {
+  display: block; /* Show on hover */
+}

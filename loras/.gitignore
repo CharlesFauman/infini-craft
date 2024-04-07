@@ -1,0 +1,6 @@
+# Ignore all directories
+*/
+
+# But not this .gitignore file
+!.gitignore
+!README.md

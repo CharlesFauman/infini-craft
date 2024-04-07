@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "infini_craft"
+version = "0.1.0"
+description = ""
+authors = ["charlie <charlie@fauman.net>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jupytext = "^1.16.1"
+jupyterlab = "^4.1.2"
+optimum = "^1.18.0"
+auto-gptq = "^0.7.1"
+trl = "^0.8.1"
+mlflow = "^2.11.3"
+exllamav2 = "^0.0.17"
+accelerate = "^0.29.1"
+datasets = "^2.18.0"
+bitsandbytes = "^0.43.0"
+uvicorn = "^0.29.0"
+fastapi = "^0.110.1"
+huggingface-hub = "^0.22.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

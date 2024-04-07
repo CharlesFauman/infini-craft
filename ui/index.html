@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        // Check for a redirect parameter in the URL
+        var params = new URLSearchParams(window.location.search);
+        if (params.has('p')) {
+          var path = params.get('p').replace(/~and~/g, '&');
+          history.replaceState({}, null, path + (params.has('q') ? '?' + params.get('q').replace(/~and~/g, '&') : '') + window.location.hash);
+        }
+      })();
+    </script>
+    <!-- TODO: Add csp -->
+    <!-- <meta http-equiv="Content-Security-Policy" content=""> -->
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infini-Craft</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
